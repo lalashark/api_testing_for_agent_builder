@@ -21,7 +21,7 @@ def get_weather(request):
         return json.dumps({"error": "Invalid request format"}), 400
     
     # Call the OpenWeatherMap API to get weather data based on the location
-    weather_api_key = '1a6744d3f92e6532c93035b5c37b9315'
+    weather_api_key = 'your_api_key'
     weather_url = f"http://api.openweathermap.org/data/2.5/weather?q={location}&appid={weather_api_key}&units=metric"
     weather_response = requests.get(weather_url)
     weather_data = weather_response.json()
